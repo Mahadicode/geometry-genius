@@ -25,37 +25,69 @@
             <h2 class="card-title">Triangle</h2>
             <p>Area(A)=0.5*(b*h)</p>
             <div>
-              <input class="w-24 p-2 text-xl rounded-md" type="text" placeholder="b">
+              <!-- base input  -->
+              <input id="base-input" class="w-24 p-2 text-xl rounded-md" type="text" placeholder="b">
               <span>cm</span>
-              <input class="w-24 p-2 text-xl rounded-md" type="text" placeholder="h">
+              <!-- height input  -->
+              <input id="height-input" class="w-24 p-2 text-xl rounded-md" type="text" placeholder="h">
               <span>cm</span>
             </div>
+            <div>
+              <p>Area: <span id="area"> 0</span><span>cm<sup>2</sup></span></p>
+            </div>
             <div class="card-actions ">
-              <button class="btn btn-primary w-full ">Calculate</button>
+              <button onclick="calculateTriangle()" class="btn btn-primary w-full ">Calculate</button>
             </div>
           </div>
         </div>
         <!-- Rectangle card 2 -->
         <div class="card bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+          <figure><img src="images/rectangle.png" alt="Shoes" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Rectangle</h2>
+            <p>Area(A)=W*l</p>
+            <div>
+              <!-- width input  -->
+              <input id="rectangle-width" class="w-24 rounded-md p-2 text-xl" type="text" placeholder="W">
+              <span>cm</span>
+              <!-- height input  -->
+              <input id="rectangle-length" class="w-24 rounded-md p-2 text-xl" type="text" placeholder="l">
+              <span>cm</span>
+            </div>
+            <div>
+              <p>Area:<span id="rectangle-area">0</span><span>cm<sup>2</sup></span></p>
+            </div>
+            <div class="card-actions">
+              <button onclick="rectangleCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
         <!-- Parallelogram card 3 -->
         <div class="card  bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+          <figure><img src="images/parallelogram.png" alt="Shoes" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Parallelogram</h2>
+            <p>Area:b*h</p>
+            <!-- input area  -->
+            <div>
+              <!-- base input  -->
+              <input id="parallelogram-base" class="w-24 p-2 text-xl rounded-md" type="text" placeholder="b"><span
+                class="m-2">cm</span>
+              <!-- height input  -->
+              <input id="parallelogram-height" class="w-24 p-2 text-xl rounded-md" type="text" placeholder="h"><span
+                class="ml-2">cm</span>
+            </div>
+
+            <!-- area display  -->
+            <div>
+              <p>Area:<span id="parallelogram-area">0</span><span>cm<sup>2</sup></span></p>
+            </div>
+
+            <!-- button -->
+            <div class="card-actions">
+              <button onclick="calculateParallelogram()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -103,7 +135,9 @@
     </section>
   </main>
   <!-- js file added -->
-  <script src="script/cardCalculation.js"></script>
+  <script src="script/triangle-Calculation.js"></script>
+  <script src="script/rectangle-calculation.js"></script>
+  <script src="script/parallelogram-calculate.js"></script>
 </body>
 
 </html>
