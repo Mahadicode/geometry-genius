@@ -16,9 +16,9 @@
   <main class="m-8">
     <section class="flex flex-col md:flex-row">
       <!-- card container  -->
-      <div class=" flex-1 grid grid-cols-3 gap-3">
+      <div class=" flex-1 grid grid-cols-3 gap-3 ">
         <!-- Triangle card 1 -->
-        <div class="card  bg-base-100 shadow-xl">
+        <div class="card  bg-base-100 shadow-xl p-3">
           <figure><img src="images/triangle.png" alt="Shoes" />
           </figure>
           <div class="card-body">
@@ -41,7 +41,7 @@
           </div>
         </div>
         <!-- Rectangle card 2 -->
-        <div class="card bg-base-100 shadow-xl">
+        <div class="card bg-base-100 shadow-xl p-3">
           <figure><img src="images/rectangle.png" alt="Shoes" />
           </figure>
           <div class="card-body">
@@ -64,7 +64,7 @@
           </div>
         </div>
         <!-- Parallelogram card 3 -->
-        <div class="card  bg-base-100 shadow-xl">
+        <div class="card  bg-base-100 shadow-xl p-3">
           <figure><img src="images/parallelogram.png" alt="Shoes" />
           </figure>
           <div class="card-body">
@@ -92,38 +92,67 @@
           </div>
         </div>
         <!-- Rhombus card 4 -->
-        <div class="card  bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <div class="card  bg-base-100 shadow-xl p-3">
+          <figure><img src="images/rhombus.png" alt="Shoes" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Rhombus</h2>
+            <p>Area(A)=0.5*d1*d2</p>
+            <div>
+              <input id="rhombus-d1" class="w-20 p-2 text-xl rounded-md" type="text" placeholder="D1"><span
+                class="m-2">cm</span>
+              <input id="rhombus-d2" class="w-20 p-2 text-xl rounded-md" type="text" placeholder="D2"><span
+                class="ml-1">cm</span>
+            </div>
+            <div>
+              <p>Area: <span id="rhombus-inner-text">0</span><span>cm <sup>2</sup></span></p>
+            </div>
+            <div class="card-actions ">
+              <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
         <!-- pentagon card 5 -->
-        <div class="card  bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <div onmousemove=" pentagonColorChange()" id="pentagon-container" class="card  bg-base-100 shadow-xl p-3">
+          <figure><img src="images/pentagon.png" alt="Shoes" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Pentagon</h2>
+            <p>Area(A)=0.5*p*b</p>
+            <div>
+              <input id="pentagon-p" class="w-20 p-2 text-xl rounded-md" type="text" placeholder="p"><span
+                class="m-2">cm</span>
+              <input id="pentagon-b" class="w-20 p-2 text-xl rounded-md" type="text" placeholder="b"><span
+                class="ml-1">cm</span>
+            </div>
+            <div>
+              <p>Area: <span id="pentagon-inner-text">0</span><span>cm <sup>2</sup></span></p>
+            </div>
+            <div class="card-actions">
+              <button onclick="pentagonAreaCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
         <!-- Ellipse card 6 -->
-        <div class="card bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+        <div onmousemove="colorChange()" id="ellipse-container" class="card bg-base-100 shadow-xl p-3">
+          <figure><img src="images/ellipse.png" alt="Shoes" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Ellipse</h2>
+            <p>Area(A)=π*a*b</p>
+            <div>
+              <!-- input a  -->
+              <input id="ellipse-a" class="w-20 p-2 text-xl rounded-md" type="text" placeholder="a"><span
+                class="m-2">cm</span>
+              <!-- input b  -->
+              <input id="ellipse-b" class="w-20 p-2 text-xl rounded-md" type="text" placeholder="b"><span
+                class="ml-1">cm</span>
+            </div>
+            <div>
+              <p>Area: <span id="ellipse-inner-text">0</span><span>cm <sup>2</sup></span></p>
+            </div>
+            <div class="card-actions ">
+              <button onclick="ellipseAreCalculate()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -138,6 +167,9 @@
   <script src="script/triangle-Calculation.js"></script>
   <script src="script/rectangle-calculation.js"></script>
   <script src="script/parallelogram-calculate.js"></script>
+  <script src="script/rhombus-calculate.js"></script>
+  <script src="script/pentagon-calculate.js"></script>
+  <script src="script/ellipse-calculate.js"></script>
 </body>
 
 </html>
